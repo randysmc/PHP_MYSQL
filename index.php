@@ -19,21 +19,21 @@
 
 
             <div>
-                <form id= "formulario"action="save_book.php" method="POST">
+                <form id= "formulario" action="save_book.php" method="POST">
                     <div>
                         <input type = "text" name= "title"
                         placeholder="Titulo" autofocus>
                     </div>
-                    <div class = "form-group">
+                    <div>
                         <input type = "text" name= "author"
                         placeholder= "Autor" autofocus>
                     </div>
-                    <div class = "form-group">
+                    <div>
                         <input type = "text" name= "publication_date"
                         placeholder= "Fecha de publicacion" autofocus>
                     </div>
-                    <div class = "form-group">
-                        <textarea name="description" rows="2" class= "form-control"
+                    <div>
+                        <textarea name="description" rows="2" 
                         placeholder= "Descripcion" autofocus></textarea>
                     </div>
                     <input onclick="confirm('Esta seguro de agregar este libro?');" type= "submit" name="save_task" value ="Guardar">

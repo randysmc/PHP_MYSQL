@@ -34,33 +34,29 @@
 <?php include ("includes/header.php")?>
 <h3>Ingrese los cambios que desee:</h3>
 
-<div class="container p-4">
-    <div class="row">
-        <div class="col-md-4 mx-auto">
-            <div class="card card_body">
+
+            <div>
                 <form action="edit_book.php?id=<?php echo $_GET['id']?>" method="POST">
-                    <div class = "form-group">
+                    <div>
                         <input type= "text" name= "title" value="<?php echo $title; ?>"
-                        class= "form-control" placeholder ="Actualiza el titulo" >
+                         placeholder ="Actualiza el titulo" >
                     </div>
-                    <div class = "form-group">
+                    <div >
                         <input type= "text" name= "author" value="<?php echo $author;?>"
-                        class= "form-control" placeholder ="Actualiza el autor" >
+                        placeholder ="Actualiza el autor" >
                     </div>
-                    <div class = "form-group">
+                    <div>
                         <input type= "text" name= "publication_date" value="<?php echo $publication_date; ?>"
-                        class= "form-control" placeholder ="Actualiza la fecha de publicacion" >
+                        placeholder ="Actualiza la fecha de publicacion" >
                     </div>
-                    <div class="form-group">
-                        <textarea name="description" rows="2" class="form-control" placeholder="Actualiza descripcion"><?php echo $description?></textarea>
+                    <div>
+                        <textarea name="description" rows="2" placeholder="Actualiza descripcion"><?php echo $description?></textarea>
                     </div>
-                    <button class= "btn btn-success" name= "update">
+                    <button  onclick="confirm('Esta seguro de actualizar este libro?');" name= "update">
                         Update
                     </button>
                 </form>
             </div>
-        </div>
-    </div>
-</div>
+
 
 <?php include ("includes/footer.php")?>
