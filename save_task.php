@@ -25,7 +25,14 @@ include("db.php");
         if(!$result){
             die("Query Failed");
         }
-        echo "saved";
+        //echo "saved";
+
+        $_SESSION['message'] = 'Book Saved';
+        //$_SESSION['message_type'] = '';
+
+
+
+        header("Location: index.php");
 
     }
 ?>

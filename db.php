@@ -1,5 +1,10 @@
 <?php
 //echo "hola";
+//Sesión que nos permita guardar un dato
+session_start();
+
+
+
 $conn = mysqli_connect(
     'localhost',
     'root',
