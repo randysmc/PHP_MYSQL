@@ -10,13 +10,27 @@
             $row= mysqli_fetch_array($result);
             $title = $row ['title'];
             $author = $row ['author'];
-            $date_publication = $row['date_publication'];
+            $publication_date= $row['publication_date'];
             $description = $row['description'];
             echo $title ;
             echo $author ;
             echo $date_publication ;
             echo $description ;
         }
+    }
+
+    if(isset($_POST['update'])){
+        $id = $_GET['id'];
+        $title= $_POST['title'];
+        $author = $_POST['author'];
+        $publication_date = $_POST['publication_date'];
+        $description = $_POST['description'];
+
+        $query = "UPDATE libro set title = '$title', author = '$author', publication_date = '$publication_date', description = '$description' WHERE id_libro = $id ";
+        mysqli_query($conn, $query);
+
+        $_SESSION['message'] = 'libro actualizado';
+        header("Location: index.php");
     }
     
 ?>
@@ -27,18 +41,18 @@
     <div class="row">
         <div class="col-md-4 mx-auto">
             <div class="card card_body">
-                <form action="">
+                <form action="edit_book.php?id=<?php echo $_GET['id']?>" method="POST">
                     <div class = "form-group">
                         <input type= "text" name= "title" value="<?php echo $title; ?>"
-                        class= "form-control" placheholder ="Actualiza el titulo" >
+                        class= "form-control" placeholder ="Actualiza el titulo" >
                     </div>
                     <div class = "form-group">
                         <input type= "text" name= "author" value="<?php echo $author;?>"
-                        class= "form-control" placheholder ="Actualiza el autor" >
+                        class= "form-control" placeholder ="Actualiza el autor" >
                     </div>
                     <div class = "form-group">
-                        <input type= "text" name= "date_publication" value="<?php echo $date_publication; ?>"
-                        class= "form-control" placheholder ="Actualiza la fecha de publicacion" >
+                        <input type= "text" name= "publication_date" value="<?php echo $publication_date; ?>"
+                        class= "form-control" placeholder ="Actualiza la fecha de publicacion" >
                     </div>
                     <div class="form-group">
                         <textarea name="description" rows="2" class="form-control" placeholder="Actualiza descripcion"><?php echo $description?></textarea>
