@@ -18,7 +18,7 @@
 
 
             <div>
-                <form action="save_task.php" method="POST">
+                <form action="save_book.php" method="POST">
                     <div class= "form-group">
                         <input type = "text" name= "title"
                         placeholder="Titulo" autofocus>
@@ -62,6 +62,15 @@
                                 <td><?php echo $row['author']?> </td>
                                 <td><?php echo $row['publication_date']?> </td>
                                 <td><?php echo $row['description']?> </td>
+                                <td>
+                                    <!-- aqui mandamos como referencia el id que estamos utilizando -->
+                                    <a href="edit_book.php?id=<?php echo $row['id_libro']?>">
+                                        Editar
+                                    </a>
+                                    <a href="delete_book.php?id=<?php echo $row['id_libro'] ?>">
+                                        Eliminar
+                                    </a>
+                                </td>
                             </tr>
 
                         <?php } ?>
