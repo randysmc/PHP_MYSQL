@@ -5,7 +5,7 @@
     <div class= "row">
         <div class = "col-md-4">
             <div>
-                <form action="">
+                <form action="save_task.php" method="POST">
                     <div class= "form-group">
                         <input type = "text" name= "title"
                         placeholder="Titulo" autofocus>
@@ -27,7 +27,7 @@
                         placeholder= "Descripcion" autofocus></textarea>
                     </div>
 
-                    <input type= "submit" name="guardar" value ="Guardar">
+                    <input type= "submit" name="save_task" value ="Guardar">
                 </form>
             </div>
         </div>
