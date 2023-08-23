@@ -1,0 +1,29 @@
+    $registros = mysql_query("SELECT *FROM cliente",  $conexion);
+    
+    
+    while($fila = mysql_fetch_array($registros)){
+        echo $fila ["nombre"];
+        echo "<p>";
+    }
+
+        function conexion(){
+        $mysqli_conexion = new mysqli("localhost", "root", "password", "ejemplo");
+        if($mysqli_conexion->connect_errno){
+            echo "Error en la conexion ";
+            exit;
+        } 
+            echo "Conexion establecida";
+            return $mysqli_conexion;
+
+        
+    }
+
+
+
+
+    CREATE TABLE `php_mysql_crud`.`task` (
+        `id` INT(11) NOT NULL AUTO_INCREMENT , 
+        `title` VARCHAR(250) NOT NULL ,
+        `description` TEXT NOT NULL , 
+        `created_at` TIMESTAMP NOT NULL DEFAULT,
+         PRIMARY KEY (`id`));
