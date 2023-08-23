@@ -1,0 +1,90 @@
+Manual Tecnico
+Para la utilización de la aplicación de Hola Mundo en su computador 
+ud tendrá que tener instalados algunos complementos
+ para que la aplicación pueda funcionar, esta es una aplicación que funciona 
+ con las tecnologías PHP y Mysql como parte del backend, dependiendo del sistema operativo 
+ que utilice puede utilizar conjuntos de software para crear y desarrollar 
+ aplicaciones web en entornos de desarrollo local estos conjuntos son LAMP y XAMPP 
+ ambos se utilizan para configurar un servicio web y un entorno de desarrollo en una máquina local.
+
+En este caso al usar LINUX utilizaremos LAMP que significa Linux, Apache, MySQL, PHP
+
+LAMP y XAMPP son dos conjuntos de software que se utilizan 
+comúnmente para crear y desarrollar aplicaciones web en entornos de desarrollo local. 
+Ambos son acrónimos que representan una combinación específica de tecnologías 
+de software que se utilizan juntas para configurar un servidor 
+web y un entorno de desarrollo en una máquina local. 
+
+Estos entornos son muy útiles para probar y desarrollar aplicaciones web antes de desplegarlas en un servidor en vivo.
+
+Pasos para instalar LAMP
+
+A continuación se brinda un enlace en donde se explica detalladamente la instalación de Apache, MySQL,
+ phpMyAdmin que es una herramienta para manejar la base de datos, esta es opcional 
+ ya que la base de datos la manejaremos desde la terminal.
+
+Utilización de la aplicación:
+Para utilizar la aplicación primero nos dirigimos a la carpeta 
+/srv/http/HelloWorld desde la raíz, podemos abrir nuestro editor de código favorito 
+
+
+Nos encontraremos con un modelo de capas en la carpeta, una que incluye las vistas 
+que está llamada "include", otra que contiene la base de datos 
+de MySQL llamada "database" y los controladores que están con extensión php.
+
+Nuestro proyecto está alojado en la carpeta Hello World  por lo que cuando queramos 
+desplegar la aplicación desde el navegador nos debemos dirigir a la siguiente
+URL "http://localhost/HelloWorld/" es importante saber que tenemos que tener inicializado 
+nuestro servidor http lo cual podemos verificar utilizando la siguiente instrucción 
+en la terminal "sudo systemctl start httpd " y luego "sudo systemctl status httpd " 
+nos mostrará un mensaje de la siguiente manera:
+
+
+lo mismo utilizaremos para inicializar nuestra base de datos
+"sudo systemctl start mysql " y luego "sudo systemctl status mysql " nos mostrará un mensaje de la siguiente manera:
+
+Para entrar a la base de datos desde la terminal utilizaremos el comando sudo mysql -u root -p luego ingresamos la contraseña que en este caso será "password" y nos mostrará una ventana así: 
+utilizamos el comando SHOW DATABASES;  
+que nos mostrará las bases de datos, ingresamos a bookstore haciendo uso del comando USE bookstore; 
+podremos visualizar las tablas que contiene la base de datos con el comando SHOW TABLES; 
+podremos ver la información contenida dentro de la tabla Libro con el comando SELECT * FROM libro; y 
+nos mostrará la información de la tabla.
+
+
+
+Con estas acciones podremos comprobar que tanto nuestro servidor apache y la base de datos MySQL se encuentran listos.
+
+
+La base de datos la podremos visualizar de la siguiente manera, puesto
+ que solo tiene una entidad utilizaremos una entidad llamada libro dentro de la base de datos bookstore.
+
+
+A grandes rasgos el uso de la aplicación se ve de la siguiente manera:
+
+
+En donde el usuario a través de la interfaz ingresa datos luego esta funciona como caja negra
+manda los datos a una base de datos y esta la regresa para que el usuario pueda ver los datos en la interfaz.
+
+
+
+Descripción:
+Servicio Web: El componente principal que maneja todas las solicitudes y respuestas del servicio web. 
+Gestiona la lógica de negocio y la interacción entre la base de datos y la interfaz de usuario.
+
+Lógica de Negocio: Se encarga de procesar la información recibida de las solicitudes y 
+realizar operaciones en la base de datos utilizando consultas SQL.
+
+Base de Datos: Almacena los datos utilizando tablas de MySQL. 
+Las consultas SQL se utilizan para recuperar y manipular los datos.
+
+Interfaz de Usuario: Proporciona una forma para que los usuarios interactúen con el servicio web. 
+Incluye formularios, vistas y elementos visuales para presentar datos y recibir información del usuario.
+
+Formularios y Elementos de Interfaz: Permiten a los usuarios ingresar datos y seleccionar opciones que serán enviadas al servicio web.
+
+Consultas SQL: Son utilizadas por la lógica de negocio para interactuar con la base de datos.
+Pueden incluir consultas de selección, inserción, actualización y eliminación.
+
+Respuestas y Datos Presentados al Usuario: La información procesada por la lógica de negocio se presenta 
+al usuario a través de la interfaz de usuario, mostrando resultados, mensajes y elementos visuales.
+

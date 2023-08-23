@@ -1,0 +1,60 @@
+Modelo Vista Controlador
+Es un patrón de arquitectura de software, que separa los datos y la lógica de negocio
+de una aplicación de su representación y el módulo encargado de gestionar los eventos y las comunicaciones
+
+Podemos encontrar distintas formas de  organizar la lógica y el código de nuestro software. 
+
+El paradigma MVC (modelo vista controlador) es un patrón de diseño que separa el código en tres capas. 
+Es importante saber cómo funciona el lenguaje de programación sobre el que estaremos trabajando 
+en este caso será PHP, MYSQL, JS, CSS.
+
+El modelo MVC tiene las siguientes definiciones
+
+Modelo:
+Gestiona todo lo relacionado con la información y la iteración con los datos de nuestra aplicación. 
+Todas las peticiones pasan por esta capa.
+
+Vista:
+Es la capa que nos mostrará la información formateada en donde el usuario puede solicitar la información
+
+Controlador:
+Une a la vista y al modelo, el usuario puede solicitar mediante la vista
+y esta hará la petición al controlador para que este pueda hacer la petición al modelo.
+
+
+HTML:
+HTML (Lenguaje de Marcas de Hipertexto, HyperText Markup Language) es el componente más básico de la Web
+
+CSS:
+Es lo que se denomina lenguaje de hojas de estilo en cascada 
+y se usa para estilizar elementos escritos en un lenguaje marcado como HTML. CSS separa el contenido 
+de la representación visual del sitio.
+
+JavaScript:
+Es uno de los lenguajes de programación más populares del mundo, es un lenguaje de programación 
+que hace que los sitios web cobren vida. 
+Esto es en contraste con HTML y CSS y que se ejecuta en los dispositivos de los visitantes y no en el servidor.
+
+PHP:
+Es un lenguaje de script del lado del servidor con varios propósitos. 
+Se usa principalmente para generar contenido dinámico en un sitio. 
+Es ampliamente popular debido a su naturaleza de código abierto y su funcionalidad versátil. 
+
+
+
+SQL:
+Es un tipo de lenguaje de programación que ayuda a solucionar problemas específicos 
+o relacionados con la manipulación e integridad de información representada 
+por datos que almacenan las bases de datos
+
+MYSQL:
+Sistema de gestión de base de datos.
+
+LAMP
+Linux
+Apache
+Mysql
+Php
+
+
+
