@@ -4,11 +4,11 @@ $conn = mysqli_connect(
     'localhost',
     'root',
     'password',
-    'php_mysql_crud'
+    'bookstore'
 );
 
 /*if (isset($conn)){
-    echo "Conexion establecida";
+    echo "Conexion a la base de datos bookstore establecida";
 }*/
 
 ?>

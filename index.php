@@ -1,4 +1,4 @@
-<?phpinclude("db.php")?>
+<?php include("db.php")?>
 
 <?php include("includes/header.php") ?>
 <div>
@@ -13,10 +13,6 @@
                     <div class = "form-group">
                         <input type = "text" name= "author"
                         placeholder= "Autor" autofocus>
-                    </div>
-                    <div class = "form-group">
-                        <input type = "text" name= "genre"
-                        placeholder= "Genero" autofocus>
                     </div>
                     <div class = "form-group">
                         <input type = "text" name= "publication_date"
