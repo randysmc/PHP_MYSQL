@@ -12,10 +12,6 @@
             $author = $row ['author'];
             $publication_date= $row['publication_date'];
             $description = $row['description'];
-            echo $title ;
-            echo $author ;
-            echo $date_publication ;
-            echo $description ;
         }
     }
 
@@ -36,6 +32,7 @@
 ?>
 
 <?php include ("includes/header.php")?>
+<h3>Ingrese los cambios que desee:</h3>
 
 <div class="container p-4">
     <div class="row">

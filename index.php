@@ -1,6 +1,7 @@
 <?php include("db.php")?>
 
 <?php include("includes/header.php") ?>
+
 <div>
     <div class= "row">
         <div class = "col-md-4">
@@ -18,8 +19,8 @@
 
 
             <div>
-                <form action="save_book.php" method="POST">
-                    <div class= "form-group">
+                <form id= "formulario"action="save_book.php" method="POST">
+                    <div>
                         <input type = "text" name= "title"
                         placeholder="Titulo" autofocus>
                     </div>
@@ -35,13 +36,13 @@
                         <textarea name="description" rows="2" class= "form-control"
                         placeholder= "Descripcion" autofocus></textarea>
                     </div>
-                    <input type= "submit" name="save_task" value ="Guardar">
+                    <input onclick="confirm('Esta seguro de agregar este libro?');" type= "submit" name="save_task" value ="Guardar">
                 </form>
             </div>
         </div>
 
-        <div class="col-md-8">
-            <h1>Hola</h1>
+        <div>
+            <h1>Listado de los libros agregados:</h1>
                 <table>
                     <thead>
                         <tr>
@@ -67,7 +68,7 @@
                                     <a href="edit_book.php?id=<?php echo $row['id_libro']?>">
                                         Editar
                                     </a>
-                                    <a href="delete_book.php?id=<?php echo $row['id_libro'] ?>">
+                                    <a onclick="confirm('Esta seguro de borrar este libro?');" href="delete_book.php?id=<?php echo $row['id_libro'] ?>">
                                         Eliminar
                                     </a>
                                 </td>

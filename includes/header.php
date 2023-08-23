@@ -2,16 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
-    <link rel="stylesheet" href"styles.css">
-    
-    
+    <title>Registro de libros</title>
+    <link rel="stylessheet" href="/styles.css">    
 </head>
-<body>
 
-<nav>
-    <div>
-        <a href = "index.php">Registro Libros</a>
-    </div>
-</nav>
+
+<body>
+        <nav>
+            <div>
+                <a href = "index.php">Hola Mundo</a>
+                <h2>Este es un sistema para registro de libros</h2>
+                <p>Ingrese los datos de el libro, incluye: <br>
+                Nombre del libro<br>
+                Autor del libro<br>
+                Fecha de publicacion<br>
+                Una descripcion<br>    
+                </p>
+
+        </div>
+        </nav>
+    
+
+  
